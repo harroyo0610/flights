@@ -1,0 +1,14 @@
+<h1>Selecciona tu vuelo</h1>
+<% @flights_avaiable.each do |t| %>
+  <p><%= t.id %></p>
+  <h3>From: </h3>
+  <p><%= t.from %></p>
+  <h3>To: </h3>
+  <p><%= t.to %></p>
+  <h3>Date: </h3>
+  <p><%= t.date %></p>
+  <h3>Passengers avaiables: </h3>
+  <p><%= t.passengers %></p>
+  <%= link_to "Elige este vuelo", controller: 'flights', action: 'new' %>
+  <hr>
+<% end %>
