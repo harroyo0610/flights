@@ -1,15 +1,14 @@
 <h1>Compra tus tickets aqui!</h1>
-  <div>
-    <%= 
-form_for :home, url: home_path  do |f| %>
-      <%= f.label :From %>
-      <%= f.text_field :from%><br>
-      <%= f.label :To %>
-      <%= f.text_field :to%><br>
-      <%= f.label :NumeroPasajaeros %>
-      <%= f.text_field :passengers%><br>
-      <%= f.label :Date %>
-      <%= f.date_field :date%><br>
-      <%= f.submit "Encuentra tus boletos"%>
-    <% end %>
-  </div>
+<div>
+  <%= form_for :home, url: home_path  do |f| %>
+    <%= f.label :From %>
+    <%= f.text_field :from%><br>
+    <%= f.label :To %>
+    <%= f.text_field :to%><br>
+    <%= f.label :NumeroPasajaeros %>
+    <%= f.text_field :passengers%><br>
+    <%= f.label :Date %>
+    <%= f.date_field :date%><br>
+    <%= f.submit "Encuentra tus boletos"%>
+  <% end %>
+</div>

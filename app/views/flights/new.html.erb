@@ -1,1 +1,21 @@
-<h1>Aqui llenaras los datos</h1>
+<h1>Llena los datos de tus tickets</h1>
+
+<div>
+  <%= form_for :booking, url: booking_path(:id => @passengers[1].id, :passengers => @passengers[0]) do |f| %>
+    <% for i in 1..@passengers[0] %>
+    <p>Datos de pasajero: <%= i %></p>
+      <%= f.label :Name %>
+      <%= f.text_field :name, name: "bookin#{i.to_s}" %><br>
+
+      <%= f.label :Email %>
+      <%= f.text_field :email, name: "booking#{i.to_s}" %><br>
+    <% end %>
+    <p>Aqui van los datos del comprador</p>
+    <%= f.label :Name %>
+      <%= f.text_field :name, name: "name_c" %><br>
+    <%= f.label :Email %>
+      <%= f.text_field :email, name: "email_c" %><br>
+
+    <%= f.submit "Comprar", data: { confirm: "Esta usted seguro?"} %>
+  <% end %>
+</div>

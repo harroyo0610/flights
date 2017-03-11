@@ -9,6 +9,6 @@
   <p><%= t.date %></p>
   <h3>Passengers avaiables: </h3>
   <p><%= t.passengers %></p>
-  <%= link_to "Elige este vuelo", controller: 'flights', action: 'new' %>
+  <%= link_to "Elige este vuelo", controller: 'flights', action: 'new', id: t.id, passengers: @passengers %>
   <hr>
 <% end %>
